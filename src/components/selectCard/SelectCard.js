@@ -10,7 +10,7 @@ const SelectCard = (props) => {
   const { data } = props
 
   return (
-    <Popover title={data.title}>
+    <Popover content={data.title}>
       <div className='card-box'>
         <div className='select-card'>
           <TableOutlined style={{ fontSize: '48px', color: '#666' }} />

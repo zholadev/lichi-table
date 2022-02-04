@@ -3,6 +3,7 @@ import './tables.sass'
 import { Typography, Divider, Row, Col, Popover } from 'antd';
 import { FileAddOutlined } from '@ant-design/icons'
 import SelectCard from '../../components/selectCard/SelectCard';
+import { Link } from 'react-router-dom';
 
 const { Title } = Typography;
 
@@ -33,11 +34,13 @@ const Tables = () => {
       <Title type="secondary" level={4}>Создать таблицу</Title>
       <Row>
         <Col span={24} style={{ marginBottom: '40px' }}>
-          <Popover title="Создать новый файл">
-            <div className="add-table-box" icon={<FileAddOutlined />}>
-              <FileAddOutlined style={{ fontSize: '36px', color: '#666' }} />
-            </div>
-          </Popover>
+          <Link to="/new">
+            <Popover content="Создать новый файл">
+              <div className="add-table-box" icon={<FileAddOutlined />}>
+                <FileAddOutlined style={{ fontSize: '36px', color: '#666' }} />
+              </div>
+            </Popover>
+          </Link>
         </Col>
       </Row>
       <Title type="primary" level={4}>Все сохраненные таблицы</Title>
